@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://duk5avaxnkhq4"]
+
+[ext_resource type="Script" path="res://SummonScreen.cs" id="1_p7dgk"]
+[ext_resource type="Script" path="res://PlayerPulls.cs" id="2_5yka3"]
+
+[node name="SummonScreen" type="Node2D"]
+script = ExtResource("1_p7dgk")
+
+[node name="TenPull" type="Button" parent="."]
+offset_left = 1408.0
+offset_top = 731.0
+offset_right = 1748.0
+offset_bottom = 841.0
+text = "10 x Summon
+"
+
+[node name="OnePull" type="Button" parent="."]
+offset_left = 1101.0
+offset_top = 789.0
+offset_right = 1352.0
+offset_bottom = 898.0
+text = "1 x Summon
+"
+
+[node name="PlayerPulls" type="Label" parent="."]
+offset_left = 1601.0
+offset_right = 1908.0
+offset_bottom = 96.0
+script = ExtResource("2_5yka3")
+
+[node name="PlayerCredits" type="Label" parent="."]
+offset_left = 3202.0
+offset_right = 3509.0
+offset_bottom = 96.0
+
+[connection signal="pressed" from="TenPull" to="." method="TenPullPressed"]
+[connection signal="pressed" from="OnePull" to="." method="OnePullPressed"]
